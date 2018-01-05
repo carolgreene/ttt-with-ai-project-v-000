@@ -15,10 +15,10 @@ module Players
       good_move = win_combinations.detect do |array|
         board.cells[array[0]] == board.cells[array[1]] && board.cells[array[2]] == " " || board.cells[array[1]] == board.cells[array[2]] && board.cells[array[0]] == " " || board.cells[array[0]] == board.cells[array[2]] && board.cells[array[1]] == " "
 
-        if good_move 
+        if good_move
           target = good_move.detect do |index|
             if board.cells[index] == " "
-              index 
+              index
             end
           end
 
