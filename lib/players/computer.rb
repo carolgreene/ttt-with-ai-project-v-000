@@ -23,7 +23,7 @@ module Players
           end
 
           answer = target
-          
+
 
         elsif  board.cells[4] == " "
           "5"
