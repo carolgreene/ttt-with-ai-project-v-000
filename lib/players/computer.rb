@@ -3,6 +3,30 @@ module Players
 
     def move(board)
 
+      win_combinations = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [6, 4, 2],
+      ]
+      good_move = win_combinations.detect do |array|
+
+        if good_move
+          target = good_move.detect do |index|
+            if board.cells[index] == " "
+              index
+            end
+          end
+
+          answer = target
+
+
+
+
         if  board.cells[4] == " "
           "5"
         elsif board.cells[0] == " "
