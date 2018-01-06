@@ -14,6 +14,7 @@ module Players
         [6, 4, 2],
       ]
       good_move = win_combinations.detect do |array|
+        board.cells[array[0]] == board.cells[array[1]] && board.cells[array[2]] == " " || board.cells[array[1]] == board.cells[array[2]] && board.cells[array[0]] == " " || board.cells[array[0]] == board.cells[array[2]] && board.cells[array[1]] == " "
 
         if good_move
           target = good_move.detect do |index|
@@ -22,12 +23,14 @@ module Players
             end
           end
 
-          answer = target
+          answer = target + 1
+
+          answer.to_s
 
 
 
 
-        if  board.cells[4] == " "
+        elsif  board.cells[4] == " "
           "5"
         elsif board.cells[0] == " "
           "1"
