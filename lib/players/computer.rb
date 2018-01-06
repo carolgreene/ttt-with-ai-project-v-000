@@ -19,7 +19,7 @@ module Players
         if good_move != nil
           target = good_move.detect do |index|
             if board.cells[index] == " "
-              index 
+              index
             end
           end
 
